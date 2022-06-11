@@ -21,7 +21,7 @@ const ColorPicker = () => {
                         <p className="text-2xl font-semibold mt-2 mb-4">
                             Inline Pallete
                         </p>
-                        <CustomColorPicker
+                        <ColorPickerComponent
                             id="inline-palette"
                             mode="Palette"
                             modeSwitcher={false}
@@ -35,7 +35,7 @@ const ColorPicker = () => {
                         <p className="text-2xl font-semibold mt-2 mb-4">
                             Inline Picker
                         </p>
-                        <CustomColorPicker
+                        <ColorPickerComponent
                             id="inline-picker"
                             mode="Picker"
                             modeSwitcher={false}
