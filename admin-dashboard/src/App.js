@@ -118,6 +118,7 @@ const App = () => {
                                     path="/financial"
                                     element={<Financial />}
                                 />
+
                                 <Route
                                     path="/color-mapping"
                                     element={<ColorMapping />}

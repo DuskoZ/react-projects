@@ -170,7 +170,7 @@ const Ecommerce = () => {
                     </div>
                 </div>
 
-                {/* <div>
+                <div>
                     <div
                         className=" rounded-2xl md:w-400 p-4 m-3"
                         style={{ backgroundColor: currentColor }}
@@ -216,10 +216,10 @@ const Ecommerce = () => {
                             />
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
 
-            {/* <div className="flex gap-10 m-4 flex-wrap justify-center">
+            <div className="flex gap-10 m-4 flex-wrap justify-center">
                 <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg p-6 rounded-2xl">
                     <div className="flex justify-between items-center gap-2">
                         <p className="text-xl font-semibold">
@@ -283,9 +283,9 @@ const Ecommerce = () => {
                         <LineChart />
                     </div>
                 </div>
-            </div> */}
+            </div>
 
-            {/* <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center">
                 <div className="md:w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
                     <div className="flex justify-between">
                         <p className="text-xl font-semibold">Weekly Stats</p>
@@ -446,7 +446,7 @@ const Ecommerce = () => {
                         </div>
                     </div>
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

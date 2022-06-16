@@ -17,9 +17,9 @@ const Chat = () => {
 
                     <button
                         type="button"
-                        className="text-white  text-xs rounded p-1 px-2 bg-orange"
+                        className="text-gray-600 dark:text-gray-200 text-xs rounded p-1 px-2 bg-orange"
                     >
-                        5 New
+                        4 New
                     </button>
                 </div>
 
