@@ -42,11 +42,42 @@ function App() {
 
             <div className="jobs-center">
                 {/* Button container */}
-                <div className="btn-container"></div>
+                <div className="btn-container">
+                    {jobs.map((item, index) => {
+                        return (
+                            <button
+                                key={item.id}
+                                onClick={() => setValue(index)}
+                                className={`job-btn ${
+                                    index === value && "active-btn"
+                                }`}
+                            >
+                                {item.company}
+                            </button>
+                        );
+                    })}
+                </div>
 
                 {/* Job info */}
-                <div className="job-info"></div>
+                <div className="job-info">
+                    <h3>{title}</h3>
+                    <h4>{company}</h4>
+                    <p className="job-date">{dates}</p>
+
+                    {duties.map((duty, index) => {
+                        return (
+                            <div key={index} className="job-desc">
+                                <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
+                                <p>{duty}</p>
+                            </div>
+                        );
+                    })}
+                </div>
             </div>
+
+            <button type="button" className="btn">
+                More Info
+            </button>
         </section>
     );
 }
