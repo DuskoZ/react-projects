@@ -38,3 +38,56 @@ body {
     display: grid;
     place-items: center;
 }
+
+.section {
+    width: 60rem;
+    margin-inline: auto;
+}
+
+.title h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.title .underline {
+    width: 10em;
+    height: 3px;
+    background-color: var(--clr-accent);
+    margin-bottom: 3em;
+    margin-inline: auto;
+}
+
+.section .jobs-center {
+    display: flex;
+    gap: 3em;
+}
+
+.section .jobs-center .btn-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 1em;
+    min-width: 200px;
+}
+
+.section .jobs-center .btn-container .job-btn {
+    font-family: inherit;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.25rem;
+    border: none;
+    color: var(--clr-light);
+    background-color: transparent;
+    transition: var(--transition);
+}
+
+.section .jobs-center .btn-container .job-btn.active-btn {
+    color: var(--clr-accent);
+    border-left: 3px solid var(--clr-accent);
+}
+
+.section .jobs-center .btn-container .section .jobs-center .job-info {
+    flex: 4;
+}
