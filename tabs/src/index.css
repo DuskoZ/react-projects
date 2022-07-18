@@ -80,6 +80,7 @@ body {
     border: none;
     color: var(--clr-light);
     background-color: transparent;
+    position: relative;
     transition: var(--transition);
 }
 
@@ -88,6 +89,51 @@ body {
     border-left: 3px solid var(--clr-accent);
 }
 
-.section .jobs-center .btn-container .section .jobs-center .job-info {
+.section .jobs-center .btn-container .job-btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    transition: var(--transition);
+}
+
+.section .jobs-center .btn-container .job-btn:hover::before {
+    opacity: 1;
+    width: 100%;
+}
+
+.section .jobs-center .job-info {
     flex: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.section .jobs-center .job-info h3 {
+    font-size: 1.625rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.section .jobs-center .job-info h4 {
+    display: inline-block;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    padding: 0.375em 1em;
+    color: var(--clr-accent);
+    background-color: rgba(64, 130, 109, 0.2);
+}
+
+.section .jobs-center .job-info .job-desc {
+    display: flex;
+    align-items: center;
+}
+
+.section .jobs-center .job-info .job-icon {
+    color: var(--clr-accent);
+    font-size: 2rem;
+    margin-right: 1em;
 }
