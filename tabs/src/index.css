@@ -67,7 +67,6 @@ body {
 .section .jobs-center .btn-container {
     display: flex;
     flex-direction: column;
-    flex: 1;
     gap: 1em;
     min-width: 200px;
 }
@@ -87,6 +86,7 @@ body {
 .section .jobs-center .btn-container .job-btn.active-btn {
     color: var(--clr-accent);
     border-left: 3px solid var(--clr-accent);
+    border-right: 3px solid var(--clr-accent);
 }
 
 .section .jobs-center .btn-container .job-btn::before {
@@ -106,10 +106,9 @@ body {
 }
 
 .section .jobs-center .job-info {
-    flex: 4;
     display: flex;
     flex-direction: column;
-    gap: 0.75em;
+    gap: 0.5em;
 }
 
 .section .jobs-center .job-info h3 {
@@ -122,9 +121,12 @@ body {
     display: inline-block;
     font-size: 1.125rem;
     text-transform: uppercase;
-    padding: 0.375em 1em;
+    letter-spacing: 1px;
+    padding: 0.375em 0.75em;
+    width: max-content;
     color: var(--clr-accent);
-    background-color: rgba(64, 130, 109, 0.2);
+    background-color: rgba(64, 130, 109, 0.15);
+    border-radius: 0.5em;
 }
 
 .section .jobs-center .job-info .job-desc {
@@ -133,7 +135,30 @@ body {
 }
 
 .section .jobs-center .job-info .job-icon {
+    flex-shrink: 0;
     color: var(--clr-accent);
-    font-size: 2rem;
-    margin-right: 1em;
+    margin-right: 1rem;
+}
+
+.section .jobs-center .job-info .job-desc p {
+    font-size: 0.875rem;
+}
+
+.section .btn {
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--clr-light);
+    background-color: transparent;
+    padding: 0.5em 1.5em;
+    border: 2px solid var(--clr-accent);
+    border-radius: 0.5em;
+    margin-inline: auto;
+    margin-top: 2em;
+    transition: var(--transition);
+}
+
+.section .btn:hover {
+    background-color: var(--clr-accent);
 }
