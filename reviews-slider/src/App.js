@@ -37,15 +37,13 @@ const App = () => {
                             <p className="person-review">{quote}</p>
 
                             <FaQuoteRight className="icon" />
-
-                            <Button icon={<FiChevronLeft />} className="prev" />
-                            <Button
-                                icon={<FiChevronRight />}
-                                className="next"
-                            />
                         </article>
                     );
                 })}
+
+                {/* Prev/Next btns */}
+                <Button icon={<FiChevronLeft />} cssClass="prev" />
+                <Button icon={<FiChevronRight />} cssClass="next" />
             </div>
         </section>
     );
