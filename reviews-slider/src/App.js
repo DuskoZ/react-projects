@@ -10,6 +10,19 @@ const App = () => {
     const [people, setPeople] = useState(data);
     const [index, setIndex] = useState(0);
 
+    // Index Management
+    useEffect(() => {
+        const lastIndex = people.length - 1;
+
+        if (index < 0) {
+            setIndex(lastIndex);
+        }
+
+        if (index > lastIndex) {
+            setIndex(0);
+        }
+    }, [index, people]);
+
     return (
         <section className="section">
             <Title title="reviews" />
@@ -18,8 +31,21 @@ const App = () => {
                 {people.map((person, personIndex) => {
                     const { id, image, name, title, quote } = person;
 
+                    // Class management
+                    let position = "next-slide";
+                    if (personIndex === index) {
+                        position = "active-slide";
+                    }
+
+                    if (
+                        personIndex === index - 1 ||
+                        (index === 0 && personIndex === people.length - 1)
+                    ) {
+                        position = "last-slide";
+                    }
+
                     return (
-                        <article key={id}>
+                        <article key={id} className={position}>
                             {/* Person photo */}
                             <img
                                 src={image}
@@ -42,8 +68,16 @@ const App = () => {
                 })}
 
                 {/* Prev/Next btns */}
-                <Button icon={<FiChevronLeft />} cssClass="prev" />
-                <Button icon={<FiChevronRight />} cssClass="next" />
+                <Button
+                    icon={<FiChevronLeft />}
+                    cssClass="prev"
+                    onClick={() => setIndex(index - 1)}
+                />
+                <Button
+                    icon={<FiChevronRight />}
+                    cssClass="next"
+                    onClick={() => setIndex(index + 1)}
+                />
             </div>
         </section>
     );
