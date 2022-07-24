@@ -23,6 +23,16 @@ const App = () => {
         }
     }, [index, people]);
 
+    // Autosliding
+    useEffect(() => {
+        let slider = setInterval(() => {
+            setIndex(index + 1);
+        }, 5000);
+        return () => {
+            clearInterval(slider);
+        };
+    }, [index]);
+
     return (
         <section className="section">
             <Title title="reviews" />
@@ -33,6 +43,7 @@ const App = () => {
 
                     // Class management
                     let position = "next-slide";
+
                     if (personIndex === index) {
                         position = "active-slide";
                     }
